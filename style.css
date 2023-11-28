@@ -143,14 +143,12 @@ body {
 }
 
 .navbar a {
-  font-size: 14px;
+  position: relative;
   padding: 0 20px;
   letter-spacing: 1px;
   text-decoration: none;
   text-transform: capitalize;
   font-weight: 600;
-  position: relative;
-  /* color: var(--color-white); */
   color: inherit;
   transition: transform 0.3s ease, color 0.3s ease;
   padding-bottom: 5px; /* Space for the dot */
@@ -182,7 +180,6 @@ body {
   bottom: -10px; /* Move the dot down */
 }
 
-
 /* Active link styles White Dot On current page */
 .navbar a.active::after {
   opacity: 1;
@@ -190,7 +187,7 @@ body {
   background-color: #fff; /* White dot for active link */
 }
 
-.non-active{
+.non-active {
   display: none;
 }
 
@@ -291,7 +288,6 @@ body {
 .section_3 {
   max-width: 450px;
   width: 100%;
-
 }
 
 .section_3 img {
@@ -408,7 +404,6 @@ body {
   display: none;
 }
 
-
 .elem img {
   position: absolute;
   z-index: 999;
@@ -422,11 +417,10 @@ body {
   transform: rotate(20deg); /* Change the rotation angle as desired */
 }
 
-.see-more{
+.see-more {
   display: flex;
-  padding:20px;
+  padding: 20px;
   justify-content: end;
-
 }
 
 .next {
@@ -436,7 +430,7 @@ body {
   font-size: 16px;
   color: #fff;
   text-decoration: none;
-  opacity: .7;
+  opacity: 0.7;
 }
 .next:hover {
   opacity: 1;
@@ -449,7 +443,7 @@ body {
   gap: 20px;
   width: 100%;
   padding: 15vw 10vw;
-  padding: max(10vw, 5rem );
+  padding: max(10vw, 5rem);
   padding-left: 35vw;
   padding-left: max(35vw, 3rem);
 }
@@ -480,20 +474,18 @@ body {
   margin-bottom: 30px;
 }
 
-.textabout a
- {
+.textabout a {
   padding: 12px 22px;
   border: 1px solid #fff;
   border-radius: 100px;
   font-size: 12px;
   color: #fff;
   text-decoration: none;
-  opacity: .7;
+  opacity: 0.7;
 }
 
-.textabout a:hover{
+.textabout a:hover {
   opacity: 1;
-
 }
 .subscribe {
   padding: 20px 30px;
@@ -579,21 +571,20 @@ body {
     right: 15rem;
   }
 
-  .section_3 img{
+  .section_3 img {
     top: 80px;
   }
   .about {
-    padding: max(5vw, 5rem );
+    padding: max(5vw, 5rem);
     padding-left: max(21vw, 3rem);
   }
 
-.about img {
-  width: 235px;
-  height: 200px;
-  border-radius: 50%;
-  background-size: contain;
-}
-
+  .about img {
+    width: 235px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: contain;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -636,6 +627,11 @@ body {
   .section_4 {
     display: none;
   }
+
+  .about {
+    flex-direction: column;
+    padding: 15px 0;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -655,7 +651,7 @@ body {
     height: 45px;
   }
 
-  .navbar{
+  .navbar {
     margin-right: 0px;
   }
 
@@ -663,8 +659,6 @@ body {
     font-size: 16px;
     padding: 0px 7px;
   }
-
-
 
   .section_1 {
     position: absolute;
@@ -678,31 +672,31 @@ body {
     left: 40px;
   }
 
-  .second{
+  .second {
     min-height: 70vh;
     min-height: 65svh;
   }
 
-  .elem h1{
-    font-size: clamp(2rem, 5vw + 1rem ,2rem);
+  .elem h1 {
+    font-size: clamp(2rem, 5vw + 1rem, 2rem);
   }
 
-  .about{
+  .about {
     flex-direction: column;
     padding: 15px 0;
   }
 
-  .footer{
+  .footer {
     flex-direction: column;
     padding: 50px 0;
   }
 
-  .footerleft{
+  .footerleft {
     gap: 45px;
     padding-bottom: 40px;
   }
 
-  .footerright{
+  .footerright {
     gap: 20px;
   }
 }

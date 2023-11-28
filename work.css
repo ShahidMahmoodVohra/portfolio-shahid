@@ -167,6 +167,10 @@ body {
   background-color: #fff; /* White dot for active link */
 }
 
+.non-active {
+  display: none;
+}
+
 
 #menu_btn {
   display: none;
