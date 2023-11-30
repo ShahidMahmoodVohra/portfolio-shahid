@@ -197,8 +197,13 @@ body {
 
 .section_main {
   width: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
+  /* min-height: 100vh; */
+  /* min-height: 100dvh; */
+  max-width: 1350px;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  position: relative;
 }
 
 .section_1 {
@@ -364,13 +369,18 @@ body {
 }
 
 .second {
-  padding-top: 100px;
+  /* padding-top: 100px; */
   width: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
+  /* min-height: 100vh; */
+  /* min-height: 100dvh; */
+  height: 100vh;
+  height: 100dvh;
   background-color: #1c1d20;
-  padding-right: 10vw;
-  padding: max(10vw, 3rem);
+  /* padding-right: 10vw; */
+  /* padding: max(10vw, 3rem); */
+  padding: 3% 10%;
+  max-width: 1350px;
+  width: 100%;
 }
 
 .elem {
@@ -419,7 +429,7 @@ body {
 
 .see-more {
   display: flex;
-  padding: 20px;
+  padding-top: 60px;
   justify-content: end;
 }
 
@@ -446,6 +456,9 @@ body {
   padding: max(10vw, 5rem);
   padding-left: 35vw;
   padding-left: max(35vw, 3rem);
+
+  max-width: 1350px;
+  width: 100%;
 }
 
 .about img {
@@ -490,6 +503,9 @@ body {
 .subscribe {
   padding: 20px 30px;
   padding-bottom: 7vw;
+
+  max-width: 1350px;
+  width: 100%;
 }
 
 .subscribe h5 {
@@ -508,24 +524,28 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 40px 30px;
+
+  max-width: 1350px;
+  width: 100%;
 }
 
 .footerleft {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 .footerright {
   display: flex;
-  gap: 30px;
+  gap: 10px;
 }
 
 .footer a {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 14px;
   font-weight: 500;
   color: #fff;
   text-decoration: none;
   cursor: pointer;
+  padding: 0 5px;
 }
 
 /* ------Media Query Start-------- */
@@ -553,6 +573,10 @@ body {
     font-size: 3rem;
     right: 25rem;
   }
+
+  .second {
+    padding-top: 8%;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -571,9 +595,9 @@ body {
     right: 15rem;
   }
 
-  .section_3 img {
+  /* .section_3 img {
     top: 80px;
-  }
+  } */
   .about {
     padding: max(5vw, 5rem);
     padding-left: max(21vw, 3rem);
@@ -584,6 +608,26 @@ body {
     height: 200px;
     border-radius: 50%;
     background-size: contain;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .see-more {
+    padding: 64px 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footerleft,
+  .footerright {
+    margin-bottom: 20px;
+  }
+
+  .footerright {
+    order: -1; /* Move to the top in mobile view */
   }
 }
 
@@ -628,9 +672,26 @@ body {
     display: none;
   }
 
+  .second {
+    padding-top: 10%;
+  }
+
+  .elem h1 {
+    font-size: clamp(1rem, 5vw + 1rem, 3rem);
+  }
+
   .about {
     flex-direction: column;
     padding: 15px 0;
+  }
+
+  .about img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .see-more {
+    padding: 64px 0;
   }
 }
 
@@ -641,7 +702,37 @@ body {
   }
 
   .section_1 {
-    top: 80%;
+    top: 500px;
+  }
+
+  .section_3 {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .elem h1 {
+    font-size: clamp(1rem, 5vw + 1rem, 2.2rem);
+  }
+
+  .see-more {
+    padding-top: 40px;
+  }
+
+  .section_3 img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    max-width: 400px;
+    position: absolute;
+    top: 0;
+  }
+
+  .about {
+    margin-top: -17rem;
+  }
+
+  .footer a {
+    padding: 8px;
   }
 }
 
@@ -668,13 +759,13 @@ body {
 
   .section_3 img {
     position: absolute;
-    top: 100px;
+    top: 0;
     left: 40px;
   }
 
   .second {
     min-height: 70vh;
-    min-height: 65svh;
+    min-height: 85svh;
   }
 
   .elem h1 {
@@ -684,9 +775,14 @@ body {
   .about {
     flex-direction: column;
     padding: 15px 0;
+    margin-top: -150px;
+  }
+  .about img {
+    width: 210px;
+    height: 190px;
   }
 
-  .footer {
+  /* .footer {
     flex-direction: column;
     padding: 50px 0;
   }
@@ -698,12 +794,29 @@ body {
 
   .footerright {
     gap: 20px;
-  }
+  } */
 }
 
 @media screen and (max-width: 320px) {
   .section_1a_para {
     font-size: 15px !important;
+  }
+
+  .subscribe {
+    max-width: 315px;
+    margin-top: 20px;
+  }
+
+  .footer {
+    max-width: 315px;
+  }
+
+  .footer a {
+    padding: 0;
+  }
+
+  .footerright {
+    margin-left: 20px;
   }
 }
 
