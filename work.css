@@ -455,6 +455,26 @@ a {
   }
 }
 
+
+.scrollup {
+  position: fixed;
+  right: 2rem;
+  bottom: 15%;
+  color: #f6f7f9;
+  box-shadow: 0 8px 12px hsla(225, 12%, 94%, 0.15);
+  display: inline-flex;
+  padding: 0.35rem;
+  background-color: #17191c;
+  font-size: 1.5rem;
+  z-index: var(--z-tooltip);
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.scrollup:hover {
+  transform: translateY(-0.25rem);
+}
+
 /* Project Section End */
 
 /* Work Section Ends */
